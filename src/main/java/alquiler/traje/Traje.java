@@ -1,7 +1,9 @@
 package alquiler.traje;
 
 import alquiler.traje.prenda.Prenda;
+import lombok.Setter;
 
+@Setter
 public class Traje {
 
     private Prenda pantalon;
@@ -22,7 +24,6 @@ public class Traje {
             this.estado = target.estado;
         }
     }
-
     public float getCosto(){
         return pantalon.getPrecio() +
                 camisa.getPrecio()+
@@ -30,10 +31,20 @@ public class Traje {
                 zapatos.getPrecio();
     }
 
+    // Debo setear a la hora de crear un traje xd
+
+
     public Traje trajeClone(){
         return new Traje(this);
     }
 
-
+    @Override
+    public String toString(){
+        return "Pantalon: "+pantalon.toString() +
+                "\nCamisa: "+ camisa.toString() +
+                "\nSaco: "+saco.toString() +
+                "\nZapatos: "+zapatos.toString() +
+                "\nEstado: "+estado.name();
+    }
 
 }

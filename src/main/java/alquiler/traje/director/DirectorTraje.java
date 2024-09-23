@@ -15,6 +15,10 @@ public class DirectorTraje {
     }
 
     public Traje makeTraje(){
+        builder.buildCamisa();
+        builder.buildPantalon();
+        builder.buildSaco();
+        builder.buildZapatos();
         return builder.getTraje();
     }
 
