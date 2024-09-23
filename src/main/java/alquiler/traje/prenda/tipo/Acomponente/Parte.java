@@ -1,7 +1,7 @@
 package alquiler.traje.prenda.tipo.Acomponente;
 
 public enum Parte {
-    PAÑUELO(2500),BOTON(700);
+    PANUELO(2500),BOTON(700);
 
     private final float precio;
     private Parte(float precio){

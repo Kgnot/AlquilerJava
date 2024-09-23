@@ -38,5 +38,17 @@ public class Alquiler {
    public float getCosto() {
         return traje.getCosto();  
     }
+
+    @Override
+    public String toString() {
+        return "Alquiler{" +
+                "\nCliente=" + cliente.getNombre() + // Supone que Cliente tiene un método getNombre()
+                ",\nTraje=" + traje.toString() + // Supone que Traje tiene un método getTipo()
+                ",\nFecha de Alquiler=" + fechaAlquiler +
+                ",\nFecha de Devolución=" + fechaDevolucion +
+                ",\nCosto=" + getCosto() +
+                '}';
+    }
+
    
 }

@@ -8,7 +8,9 @@ public class Trajes {
     private static ArrayList<Traje> trajes;
     private static Trajes instanciaT;
 
-    private Trajes(){}
+    private Trajes(){
+        trajes = new ArrayList<>();
+    }
 
     public static Trajes getInstancia(){
         if(instanciaT == null){

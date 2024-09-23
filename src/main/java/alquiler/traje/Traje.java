@@ -40,10 +40,10 @@ public class Traje {
 
     @Override
     public String toString(){
-        return "Pantalon: "+pantalon.toString() +
-                "\nCamisa: "+ camisa.toString() +
-                "\nSaco: "+saco.toString() +
-                "\nZapatos: "+zapatos.toString() +
+        return "Pantalon: "+pantalon.toPrendaString() +
+                "\nCamisa: "+ camisa.toPrendaString() +
+                "\nSaco: "+saco.toPrendaString() +
+                "\nZapatos: "+zapatos.toPrendaString() +
                 "\nEstado: "+estado.name();
     }
 

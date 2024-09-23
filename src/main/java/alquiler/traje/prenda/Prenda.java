@@ -1,9 +1,14 @@
 package alquiler.traje.prenda;
 
-public abstract class Prenda {
-    protected float precio;
-    public abstract float getPrecio();
+import alquiler.traje.prenda.Color.Color;
 
-   // public abstract String toString();
+public abstract class Prenda {
+    protected Color color;
+    public abstract float getPrecio();
+    public Color getColor(){
+        return color;
+    }
+
+   public abstract String toPrendaString();
 
 }

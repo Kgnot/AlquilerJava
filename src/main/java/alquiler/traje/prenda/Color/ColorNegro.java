@@ -1,8 +1,8 @@
 package alquiler.traje.prenda.Color;
 
-public class ColorNegro {
+public class ColorNegro implements Color{
     
-    public String getNombre() {
+    public String getColor() {
             return "Negro";
     }
 }
