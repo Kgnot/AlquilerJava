@@ -1,6 +1,7 @@
 package alquiler.traje.prenda.tipo;
 
 import alquiler.traje.prenda.Prenda;
+import alquiler.traje.prenda.tipo.camisa.TiposCamisa;
 
 public class Camisa extends Prenda {
     @Override
