@@ -20,5 +20,8 @@ public class Trajes {
         return trajes;
     }
 
+    public void algo(){
+        System.out.println("aver");
+    }
 
 }
