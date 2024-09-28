@@ -41,7 +41,7 @@ public class Shirt extends ComplexGarment {
     @Override
     public String toString() {
         return "\nTipo: " + type.name() +
-                "\nColor: " + color.toString() +
+                "\nColor: " + super.color.toString() +
                 "\nPrecio: " + getPrice();
     }
 }

@@ -8,7 +8,6 @@ import java.util.ArrayList;
 
 public class Shoes extends ComplexGarment {
     private ShoesType type;
-    private Color color;
     public Shoes(ShoesType type) {
         this.type = type;
         super.garmentList = new ArrayList<>();
@@ -31,7 +30,7 @@ public class Shoes extends ComplexGarment {
     @Override
     public String toString(){
         return "\nTipo: "+ type.name()+
-                "\nColor: "+color.toString()+
+                "\nColor: "+super.color.toString()+
                 "\nPrecio: "+ getPrice();
     }
 }

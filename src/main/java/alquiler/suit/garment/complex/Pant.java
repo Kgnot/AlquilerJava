@@ -36,7 +36,7 @@ public class Pant extends ComplexGarment {
     @Override
     public String toString() {
         return "\nTipo: " + tipo.name() +
-                "\nColor: " + color.toString() +
+                "\nColor: " + super.color.toString() +
                 "\nPrecio: " + getPrice();
 
     }
