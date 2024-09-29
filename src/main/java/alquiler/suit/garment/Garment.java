@@ -4,14 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.awt.*;
-import java.util.ArrayList;
 
 @Getter
 @Setter
-public abstract class GarmentComponent {
+public abstract class Garment {
     protected Color color;
     protected float price;
-
-    public abstract ArrayList<GarmentComponent> getGarments();
 
 }

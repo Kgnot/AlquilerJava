@@ -1,8 +1,10 @@
 package alquiler.client;
 
 import alquiler.comp.Client;
+import alquiler.comp.Invoice;
 import alquiler.comp.Rental;
 import alquiler.suit.Suit;
+import alquiler.suit.SuitType;
 
 public class RentalFacade {
     private final AvailabilitySuit availabilitySuit;
@@ -17,11 +19,18 @@ public class RentalFacade {
         assignmentInvoice = new AssignmentInvoice();
     }
 
-    public void rentSuit(Client client, Suit suit){
-        if (availabilitySuit.verifyAvailability(suit)){ // Si esta disponible :
+    public void rentSuit(Client client, SuitType suitType){
+        // Buscamos el suit:
+        Suit suit =availabilitySuit.verifyAvailability(suitType);
+
+        if (suit != null){ // Si esta disponible :
             Rental rental = assignmentRental.assignSuit(suit,client);  // Asignamos el traje
             if(validatePayment.verifyPayment()){      //Validamos el pago
-                assignmentInvoice.assignInvoice(rental); // creando la factura
+                Invoice invoice = assignmentInvoice.assignInvoice(rental); // creando la factura
+                // Aquí me va a dar todos los detalles de la factura:
+                String details = invoice.toString();
+                invoice.setDetails(details);
+                System.out.println(details);
             }
             else{ //si el pago no es válido entonces me dice no es valido
                 System.out.println("No es válido el pago.");
@@ -29,4 +38,6 @@ public class RentalFacade {
 
         }
     }
+
+
 }

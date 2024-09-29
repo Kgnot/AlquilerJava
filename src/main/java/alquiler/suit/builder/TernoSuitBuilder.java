@@ -1,6 +1,7 @@
 package alquiler.suit.builder;
 
 import alquiler.suit.Suit;
+import alquiler.suit.SuitType;
 import alquiler.suit.garment.complex.Shirt;
 import alquiler.suit.garment.complex.Pant;
 import alquiler.suit.garment.complex.Jacket;
@@ -16,6 +17,8 @@ public class TernoSuitBuilder extends SuitBuilder {
 
     public TernoSuitBuilder() {
         super.suit = new Suit();
+        super.suit.setSuitType(SuitType.TERNO);
+
     }
 
     @Override

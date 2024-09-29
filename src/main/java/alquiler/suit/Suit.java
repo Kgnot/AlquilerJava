@@ -1,15 +1,17 @@
 package alquiler.suit;
-import alquiler.suit.garment.GarmentComponent;
+import alquiler.suit.garment.Garment;
 import lombok.Getter;
 import lombok.Setter;
 @Setter
 @Getter
 public class Suit {
-    private GarmentComponent pant;
-    private GarmentComponent jacket;
-    private GarmentComponent shirt;
-    private GarmentComponent shoes;
+    private Garment pant;
+    private Garment jacket;
+    private Garment shirt;
+    private Garment shoes;
     private State state;
+    // No se si esto esté bien:
+    private SuitType suitType;
     //Constructor
     public Suit(){
         state = State.AVAILABLE; // Siempre que creamos un traje sera disponible
@@ -29,15 +31,15 @@ public class Suit {
                 jacket.getPrice()+
                 shoes.getPrice();
     }
-    public Suit trajeClone(){
+    public Suit suitClone(){
         return new Suit(this);
     }
     @Override
     public String toString(){
-        return "Pantalon: "+ pant.toString() +
-                "\nCamisa: "+ shirt.toString() +
-                "\nSaco: "+ jacket.toString() +
-                "\nZapatos: "+ shoes.toString() +
-                "\nEstado: "+ state.name();
+        return "pant: "+ pant.toString() +
+                "\nshirt: "+ shirt.toString() +
+                "\njacket: "+ jacket.toString() +
+                "\nshoes: "+ shoes.toString() +
+                "\nstate: "+ state.name();
     }
 }

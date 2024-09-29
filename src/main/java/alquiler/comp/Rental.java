@@ -16,6 +16,7 @@ public class Rental {
     private LocalDate returnDate;
 
     public Rental(Client client, Suit suitList, LocalDate rentalDate, LocalDate returnDate) {
+        this.suitList = new ArrayList<>();
         this.client = client;
         this.suitList.add(suitList);
         this.rentalDate = rentalDate;
@@ -31,14 +32,22 @@ public class Rental {
         return total;
     }
 
+    public String listToString(){
+        String str ="";
+        for(Suit s : suitList){
+            str += s.toString() +"\n";
+        }
+        return str;
+    }
+
     @Override
     public String toString() {
-        return "Alquiler{" +
-                "\nCliente=" + client.getName() + // Supone que Cliente tiene un método getNombre()
-                ",\nTraje=" + suitList.toString() + // Supone que Traje tiene un método getTipo()
-                ",\nFecha de Alquiler=" + rentalDate +
-                ",\nFecha de Devolución=" + returnDate +
-                ",\nCosto=" + getTotal() +
+        return "rent{" +
+                "\nclient:" + client.getName() + // Supone que Cliente tiene un método getNombre()
+                ",\nsuit:" + listToString() + // Supone que Traje tiene un método getTipo()
+                ",\nrentalDate:" + rentalDate +
+                ",\nreturnDate:" + returnDate +
+                ",\ntotal : " + getTotal() +
                 '}';
     }
 

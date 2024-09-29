@@ -1,41 +1,46 @@
 package alquiler;
 
-import alquiler.service.SuitService;
-import alquiler.comp.Rental;
+import alquiler.client.RentalFacade;
 import alquiler.comp.Client;
+import alquiler.service.SuitService;
 import alquiler.suit.Suit;
+import alquiler.suit.SuitType;
 import alquiler.suit.builder.SuitBuilder;
+import alquiler.suit.builder.TernoSuitBuilder;
 import alquiler.suit.builder.TuxedoSuitBuilder;
 import alquiler.suit.director.SuitDirector;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Main {
-  /*  public static void main(String[] args) {
-        // Aqui vendria siendo toda la logica del negocio, y ademas poniendo variables dentro
-        // de el builder para tambien, construir de manera manual algun traje
-        // Y mediante eso crear los trajes del negocio y ademas darle al cliente
-        // la posibilidad de poder ser parte de.
-        AgregarPrueba();
-        SuitService t = SuitService.getInstancia();
-        ArrayList<Suit> almacen = t.getListaTrajes(); // - Aqui tenemos el almacen que ya metimos a un traje, y sera asociado a un cliente
-        Client C1 = new Client("Luis Fernando Diaz","1001884523");
-        //agregamos un alquiler al cliente
-        Rental rental = new Rental(C1,almacen.get(0), LocalDate.now(), LocalDate.now().plusDays(30));
 
-        C1.addRental(rental); // Y aqu  i agregamos al alquiler al Cliente
+    public static void main(String[] args) {
+        AgregarPruebas(); // agregaremos las pruebas:
+        // Crearemos al Cliente:
+        Client c1 = new Client("Juan","1000990813");
+        RentalFacade facade = new RentalFacade(); // creamos el facade:
+        // Que traje escoge? : Un Smoking:
+        facade.rentSuit(c1, SuitType.TUXEDO);
 
-        System.out.println(rental.toString());
     }
 
-    public static void AgregarPrueba(){
+    public static void AgregarPruebas(){
         SuitBuilder builder = new TuxedoSuitBuilder(); // Crearemos esmoquin --
+        SuitBuilder builder2 = new TernoSuitBuilder();
         SuitDirector dt = new SuitDirector(builder); // Instanciamos el director
-        Suit t1 = dt.makeTraje(); // creamos el traje, ahora que tiene el traje?
+        Suit t1 = dt.makeTraje(); // creamos el traje.
+        dt.setBuilder(builder2);
+        Suit t2 = dt.makeTraje();
+
+
         SuitService almacen = SuitService.getInstancia();
-        ArrayList<Suit> coll = almacen.getListaTrajes();
+        ArrayList<Suit> coll = almacen.getAll();
         coll.add(t1);
+        for(int i = 0; i < 200;i++){
+            coll.add(t1.suitClone());
+            coll.add(t2.suitClone());
+        }
+
+
     }
-*/
 }

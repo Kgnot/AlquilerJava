@@ -13,16 +13,27 @@ public class Invoice {
     @Getter
     @Setter
     private InvoiceState state;
+    @Getter
+    @Setter
+    private String details ="";
     private float total;
+
 
     public Invoice(Rental rental) {
         this.rental = rental;
         total = rental.getTotal();
     }
-
     public float getTotal() {
         total += (total * state.getI());
         return total;
+    }
+
+
+    @Override
+    public String toString(){
+        return "{ rental: " + rental.toString() +" , "
+                + "state: " + state + " , "
+                + "total: "+ total + " }";
     }
 
 }

@@ -1,6 +1,7 @@
 package alquiler.suit.builder;
 
 import alquiler.suit.Suit;
+import alquiler.suit.SuitType;
 import alquiler.suit.garment.complex.Shirt;
 import alquiler.suit.garment.complex.Pant;
 import alquiler.suit.garment.complex.Jacket;
@@ -15,6 +16,7 @@ import java.awt.*;
 public class MorningSuitBuilder extends SuitBuilder {
     public MorningSuitBuilder(){
         super.suit = new Suit();
+        super.suit.setSuitType(SuitType.MORNING);
     }
     @Override
     public void buildPant() {

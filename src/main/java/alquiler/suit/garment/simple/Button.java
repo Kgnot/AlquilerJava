@@ -1,10 +1,10 @@
 package alquiler.suit.garment.simple;
 
-import alquiler.suit.garment.SimpleGarment;
+import alquiler.suit.garment.Accessory;
 
 import java.awt.*;
 
-public class Button extends SimpleGarment {
+public class Button extends Accessory {
 
     private final float price = 700;
 
