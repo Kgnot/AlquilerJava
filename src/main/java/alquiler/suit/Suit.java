@@ -1,7 +1,9 @@
 package alquiler.suit;
 import alquiler.suit.garment.GarmentComponent;
+import lombok.Getter;
 import lombok.Setter;
 @Setter
+@Getter
 public class Suit {
     private GarmentComponent pant;
     private GarmentComponent jacket;

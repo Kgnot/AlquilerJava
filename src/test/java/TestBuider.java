@@ -1,4 +1,4 @@
-import alquiler.almacen.Store;
+import alquiler.service.SuitService;
 import alquiler.suit.Suit;
 import alquiler.suit.builder.SuitBuilder;
 import alquiler.suit.builder.TuxedoSuitBuilder;
@@ -15,7 +15,7 @@ public class TestBuider {
         SuitDirector dt = new SuitDirector(builder); // Instanciamos el director
         Suit t1 = dt.makeTraje(); // creamos el traje, ahora que tiene el traje?
         System.out.println(t1.toString());
-        Store almacen = Store.getInstancia();
+        SuitService almacen = SuitService.getInstancia();
         ArrayList<Suit> coll = almacen.getListaTrajes();
         coll.add(t1);
         //El costo:
