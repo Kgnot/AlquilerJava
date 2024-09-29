@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class InvoiceService implements Service<Invoice> {
 
-    private InvoiceService instance;
+    private static InvoiceService instance;
     private final ArrayList<Invoice> invoiceList;
 
     private InvoiceService(){
@@ -14,7 +14,7 @@ public class InvoiceService implements Service<Invoice> {
     }
 
     //Methods
-    public InvoiceService getInstance(){
+    public static InvoiceService getInstance(){
         if(instance == null){
             instance = new InvoiceService();
         }
