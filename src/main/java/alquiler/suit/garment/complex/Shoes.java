@@ -10,17 +10,14 @@ public class Shoes extends ComplexGarment {
     private ShoesType type;
     public Shoes(ShoesType type) {
         this.type = type;
-        super.garmentList = new ArrayList<>();
         super.price = type.getPrice(); // El precio del Zapato
     }
     public Shoes(ShoesType type, Color color) {
         this.type = type;
-        super.garmentList = new ArrayList<>();
         super.color = color;
         super.price = type.getPrice(); // El precio del Zapato
     }
     public Shoes(){
-        super.garmentList = new ArrayList<>();
     }
     public void setType(ShoesType shoesType){
         this.type = shoesType;

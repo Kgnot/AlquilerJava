@@ -14,25 +14,23 @@ public class Jacket extends ComplexGarment {
 
     public Jacket(JacketType tipo, Color color) {
         this.tipo = tipo;
-        super.garmentList = new ArrayList<>();
         super.color = color;
         super.price = tipo.getPrice();
     }
 
     public Jacket(JacketType tipo) {
         this.tipo = tipo;
-        super.garmentList = new ArrayList<>();
         super.price = tipo.getPrice();
     }
 
     public Jacket() {
-        super.garmentList = new ArrayList<>();
-
     }
+
     @Override
     public float getPrice() {
         return 0;
     }
+
     public void setColor(Color color) {
         super.color = color;
     }

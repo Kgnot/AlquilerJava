@@ -9,6 +9,7 @@ import alquiler.suit.builder.SuitBuilder;
 import alquiler.suit.builder.TernoSuitBuilder;
 import alquiler.suit.builder.TuxedoSuitBuilder;
 import alquiler.suit.director.SuitDirector;
+import alquiler.suit.garment.Accessory;
 
 import java.util.ArrayList;
 
@@ -20,7 +21,8 @@ public class Main {
         Client c1 = new Client("Juan","1000990813");
         RentalFacade facade = new RentalFacade(); // creamos el facade:
         // Que traje escoge? : Un Smoking:
-        facade.rentSuit(c1, SuitType.TUXEDO);
+        ArrayList<Accessory> ac = new ArrayList<>();
+        facade.rentSuit(c1, SuitType.TUXEDO,null);
 
     }
 

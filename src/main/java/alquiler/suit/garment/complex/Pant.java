@@ -13,19 +13,16 @@ public class Pant extends ComplexGarment {
     public Pant(PantType tipo, Color color) {
         this.tipo = tipo;
         super.color = color;
-        super.garmentList = new ArrayList<>();
         super.price = tipo.getPrice();
     }
 
     public Pant(PantType tipo) {
         this.tipo = tipo;
-        super.garmentList = new ArrayList<>();
         super.price = tipo.getPrice();
 
     }
 
     public Pant() {
-        super.garmentList = new ArrayList<>();
     }
 
     public void setTipo(PantType tipo) {

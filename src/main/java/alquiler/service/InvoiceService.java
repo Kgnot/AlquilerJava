@@ -3,11 +3,12 @@ package alquiler.service;
 import alquiler.comp.Invoice;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class InvoiceService implements Service<Invoice> {
 
     private static InvoiceService instance;
-    private final ArrayList<Invoice> invoiceList;
+    private final List<Invoice> invoiceList;
 
     private InvoiceService(){
         invoiceList = new ArrayList<>();
@@ -35,7 +36,7 @@ public class InvoiceService implements Service<Invoice> {
     }
 
     @Override
-    public ArrayList<Invoice> getAll() {
+    public List<Invoice> getAll() {
         return invoiceList;
     }
 

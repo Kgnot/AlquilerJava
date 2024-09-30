@@ -11,18 +11,15 @@ public class Shirt extends ComplexGarment {
     private ShirtType type;
 
     public Shirt() {
-        super.garmentList = new ArrayList<>();
     }
 
     public Shirt(ShirtType type) {
         this.type = type;
-        super.garmentList = new ArrayList<>();
         super.price = type.getPrice();
     }
 
     public Shirt(ShirtType type, Color color) {
         this.type = type;
-        super.garmentList = new ArrayList<>();
         super.color = color;
         super.price = type.getPrice();
 

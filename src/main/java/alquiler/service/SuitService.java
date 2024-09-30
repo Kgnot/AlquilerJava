@@ -3,16 +3,13 @@ package alquiler.service;
 import alquiler.suit.State;
 import alquiler.suit.Suit;
 import alquiler.suit.SuitType;
-import alquiler.suit.builder.MorningSuitBuilder;
 
 import java.util.ArrayList;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class SuitService implements Service<Suit> {
     private static ArrayList<Suit> suitList;
     private static SuitService instanciaT;
-
     private SuitService(){
         suitList = new ArrayList<>();
     }
@@ -52,7 +49,7 @@ public class SuitService implements Service<Suit> {
                 .collect(Collectors.toCollection(ArrayList::new));
     }
     // Podemos buscar también por tipo y solo necesitamos uno:
-    public Suit getSuitType(SuitType st) {
+    public Suit findSuitType(SuitType st) {
         return suitList.stream()
                 .filter(suit-> {
                     return suit.getSuitType().equals(st) && suit.getState().equals(State.AVAILABLE);

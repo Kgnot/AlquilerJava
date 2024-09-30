@@ -3,11 +3,12 @@ package alquiler.service;
 import alquiler.comp.Rental;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RentalService implements Service<Rental> {
 
     private static RentalService instance;
-    private final ArrayList<Rental> rentalList;
+    private final List<Rental> rentalList;
 
     private RentalService(){
         rentalList = new ArrayList<>();
@@ -32,7 +33,7 @@ public class RentalService implements Service<Rental> {
     }
 
     @Override
-    public ArrayList<Rental> getAll() {
+    public List<Rental> getAll() {
         return rentalList;
     }
 

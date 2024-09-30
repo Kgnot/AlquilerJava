@@ -31,9 +31,9 @@ public class Invoice {
 
     @Override
     public String toString(){
-        return "{ rental: " + rental.toString() +" , "
-                + "state: " + state + " , "
-                + "total: "+ total + " }";
+        return "rental: {" + rental.toString() +" } , "
+                + "\nstate: " + state + " , "
+                + "\ntotal: "+ total + " ";
     }
 
 }

@@ -27,28 +27,26 @@ public class Rental {
    public float getTotal() {
         float total = 0;
         for(Suit s : suitList){
-            total+=s.getCosto();
+            total+=s.getPrice();
         }
         return total;
     }
 
-    public String listToString(){
+    private String listToString(){
         String str ="";
         for(Suit s : suitList){
-            str += s.toString() +"\n";
+            str += s.toString() +", \n";
         }
-        return str;
+        return str + "}";
     }
 
     @Override
     public String toString() {
-        return "rent{" +
-                "\nclient:" + client.getName() + // Supone que Cliente tiene un método getNombre()
-                ",\nsuit:" + listToString() + // Supone que Traje tiene un método getTipo()
-                ",\nrentalDate:" + rentalDate +
-                ",\nreturnDate:" + returnDate +
-                ",\ntotal : " + getTotal() +
-                '}';
+        return
+                "\nclient: {" + client.getName() +"},"+ // Supone que Cliente tiene un método getNombre()
+                "\nsuit: {" + listToString() +"},"+ // Supone que Traje tiene un método getTipo()
+                "\nrentalDate: " + rentalDate +","+
+                "\nreturnDate:" + returnDate +",";
     }
 
    
