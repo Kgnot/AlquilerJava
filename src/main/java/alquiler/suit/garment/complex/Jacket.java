@@ -28,7 +28,7 @@ public class Jacket extends ComplexGarment {
 
     @Override
     public float getPrice() {
-        return 0;
+        return tipo.getPrice();
     }
 
     public void setColor(Color color) {

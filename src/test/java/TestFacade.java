@@ -8,8 +8,12 @@ import alquiler.suit.builder.TernoSuitBuilder;
 import alquiler.suit.builder.TuxedoSuitBuilder;
 import alquiler.suit.director.SuitDirector;
 import alquiler.suit.garment.Accessory;
+import alquiler.suit.garment.accessory.Belt;
+import alquiler.suit.garment.accessory.Button;
 
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TestFacade {
 
@@ -19,8 +23,11 @@ public class TestFacade {
         Client c1 = new Client("Juan","1000990813");
         Facade facade = new Facade(); // creamos el facade:
         // Que traje escoge? : Un Smoking:
-        ArrayList<Accessory> ac = new ArrayList<>();
-        facade.rentSuit(c1, SuitType.TUXEDO,null); // Este seria como el testing de Facade
+        ArrayList<Accessory> ac = new ArrayList<>(Arrays.asList(
+                new Belt(Color.gray),
+                new Button(Color.DARK_GRAY)
+        ));
+        facade.rentSuit(c1, SuitType.TUXEDO,ac); // Este seria como el testing de Facade
 
     }
 
