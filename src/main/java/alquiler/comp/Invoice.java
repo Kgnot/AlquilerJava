@@ -1,6 +1,5 @@
 package alquiler.comp;
 
-import alquiler.client.InvoiceState;
 import lombok.Getter;
 import lombok.Setter;
 

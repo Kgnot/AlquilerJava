@@ -1,6 +1,7 @@
 package alquiler.client;
 
 import alquiler.comp.Invoice;
+import alquiler.comp.InvoiceState;
 import alquiler.comp.Rental;
 import alquiler.service.InvoiceService;
 
