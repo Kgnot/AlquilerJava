@@ -1,6 +1,6 @@
 package alquiler.service;
 
-import alquiler.comp.Invoice;
+import alquiler.comp.invoice.Invoice;
 
 import java.util.ArrayList;
 import java.util.List;

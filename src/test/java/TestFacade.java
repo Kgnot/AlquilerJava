@@ -1,4 +1,4 @@
-import alquiler.client.Facade;
+import alquiler.facade.Facade;
 import alquiler.comp.Client;
 import alquiler.service.SuitService;
 import alquiler.suit.Suit;
@@ -20,14 +20,19 @@ public class TestFacade {
     public static void main(String[] args) {
         AgregarPruebas(); // agregaremos las pruebas:
         // Crearemos al Cliente:
-        Client c1 = new Client("Juan","1000990813");
+        Client c1 = new Client("Juan","1000990813","juanemail@email.com");
         Facade facade = new Facade(); // creamos el facade:
-        // Que traje escoge? : Un Smoking:
-        ArrayList<Accessory> ac = new ArrayList<>(Arrays.asList(
+        // Que traje escoge? -> Un Smoking: y paga con? -> Efectivo : Tipo de factura? : Digital
+        // PAGO: 2-> credito | 3-> paypal | default -> efectivo
+        //FACTURA:  1-> fisico | default -> virtual
+
+        ArrayList<Accessory> accessories = new ArrayList<>(Arrays.asList(
                 new Belt(Color.gray),
                 new Button(Color.DARK_GRAY)
         ));
-        facade.rentSuit(c1, SuitType.TUXEDO,ac); // Este seria como el testing de Facade
+
+
+        facade.rentSuit(c1, SuitType.TUXEDO,accessories,1,1); // Este seria como el testing de Facade
 
     }
 

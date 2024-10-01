@@ -8,8 +8,8 @@ import java.util.ArrayList;
 public class Client extends Person {
     private final ArrayList<Rental> rentalList;
 
-    public Client(String nombre, String cedula) {
-        super(nombre, cedula);
+    public Client(String nombre, String cedula, String email) {
+        super(nombre, cedula,email);
         this.rentalList = new ArrayList<>();
     }
 

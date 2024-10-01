@@ -4,10 +4,8 @@ import alquiler.comp.Client;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ClientService implements Service<Client>{
-
     private static ClientService instance;
     private final List<Client> clientList;
 

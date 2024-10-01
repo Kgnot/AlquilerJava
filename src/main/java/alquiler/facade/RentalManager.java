@@ -1,4 +1,4 @@
-package alquiler.client;
+package alquiler.facade;
 
 import alquiler.comp.Client;
 import alquiler.comp.Rental;
@@ -8,7 +8,7 @@ import alquiler.suit.Suit;
 import java.time.LocalDate;
 
 public class RentalManager {
-    private RentalService rs = RentalService.getInstance();
+    private final RentalService rs = RentalService.getInstance();
     final static short MAX = 5;
 
     public Rental assignSuit(Suit suit, Client client) {

@@ -1,4 +1,4 @@
-package alquiler.comp;
+package alquiler.comp.invoice;
 
 import alquiler.service.InvoiceService;
 import lombok.Getter;
